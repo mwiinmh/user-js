@@ -12,57 +12,89 @@ header h1{
     background-color: var(--header-title); 
     color: var(--header-title-text);
     font-size: var(--header-font-size);
+    font-weight: 500;
+    text-shadow: .2rem .2rem 0 #584bac,
+    -.2rem -.2rem 0 #584bac,
+    -.2rem .2rem 0 #584bac,
+    .2rem -.2rem 0 #584bac;
 
 }
 main{
     display: flex;
-/*     flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 section{
+    border-radius: .8rem;
     max-width: 80rem;
     background-color: #fafafafa;
     box-shadow: 0 0 10rem rgba(64, 62, 62, 0.5);
     border: solid .1rem transparent;
     
 }
-section h2{
+section{
+    /* nouvelle syntaxe css */
+    h2{
     background-color: #222;
     color: var(--header-title-text);
     padding: 1rem;
+    border-radius: .8rem;
+    }
+
+    p{
+        padding: 1rem; 
+    }
+    .btn-default{
+        width: max-content;
+        line-height: 3.5rem;
+        padding: 0 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bolder;
+        border: solid .1rem #222;
+        margin: 1rem;
+        border-radius: .4rem;
+        color: #222;
+        cursor: pointer;
+    }
+    .btn-primary{
+        background-color: #1161ec;
+        color: #fff;
+        border: solid .1rem transparent;
+    }
+    .btn-alert{
+        background-color: #e811ec;
+        color: #fff;
+        border: solid .1rem transparent;
+    }
+    .btn-warning{
+        background-color: #efad14;
+        color: #222;
+        border: solid .1rem transparent;
+    }
+   
 }
-section p{
-    padding: 1rem;
+
+
+    
+    
+
+
+figure{
+    max-width: 40rem;
+    display: block;
+    
 }
-.btn-default{
-    width: max-content;
-    line-height: 3.5rem;
-    padding: 0 1rem;
+figure figcaption *{
     text-align: center;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    border: solid .1rem #222;
-    margin: 1rem;
-    border-radius: .4rem;
-    color: #222;
-    cursor: pointer;
 }
-.btn-primary{
-    background-color: #1161ec;
-    color: #fff;
-    border: solid .1rem transparent;
-}
-.btn-alert{
-    background-color: #e811ec;
-    color: #fff;
-    border: solid .1rem transparent;
-}
-.btn-warning{
-    background-color: #efad14;
-    color: #222;
-    border: solid .1rem transparent;
+figure img{
+    display: inline-block;
+    width: 100%;
+    object-fit: cover;
+    /* aspect-ratio: 4 / 4; */
 }
 footer{
     text-align: center;

@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", e =>{ // un écouteur js avec l'ob
     console.log(e.target)
 
     /* prompt */
-    let firstName, lastName, age, tabUser, element, btn, stock, unstock, userIndex
+    let firstName, lastName, age, tabUser, 
+        element, btn, stock, unstock, userIndex, image
 
+        image = document.querySelector("img")
         btn = document.querySelector("section button") /* btn pour l'utilisateur */
       
         element = document.querySelector("section h2")
@@ -16,6 +18,8 @@ document.addEventListener("DOMContentLoaded", e =>{ // un écouteur js avec l'ob
         })
 
        const callPrompt = {
+
+            logo: "https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png",
             
             // méthode prompt
             dialog(){
@@ -39,7 +43,10 @@ document.addEventListener("DOMContentLoaded", e =>{ // un écouteur js avec l'ob
         
                 element.innerHTML = `🚀 Bonjour <strong>${lastName}</strong> voici vos données ${userIndex}`
             }
-       }
+        }
 
+        image.src = callPrompt.logo
+      
+       
 
 })
